@@ -39,7 +39,7 @@ public class ResponseCellRenderer implements TableCellRenderer{
      public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
         Component panel = (Component) value;
         
-        if (table.getRowCount() != 0 && table.getColumnCount() != 0);
+        if (table.getRowCount() != 0 && table.getColumnCount() != 0)
         {
             int height = 10;
             if (heights == null || heights.length <= row)
