@@ -17,6 +17,7 @@ import ovation.OvationException;
 import ovation.Response;
 import ovation.URLResponse;
 import imagej.data.Dataset;
+import imagej.data.DefaultDataset;
 
 
 /**
@@ -38,7 +39,7 @@ public class ImageJVisualization implements Visualization{
         assert (this.response instanceof URLResponse);
 
         try {
-            final ImageJ context = ImageJ.createContext();
+            final ImageJ context = new ImageJ();
 
 //                // load the dataset
 //                final IOService ioService = context.getService(IOService.class);
@@ -50,7 +51,7 @@ public class ImageJVisualization implements Visualization{
 //                displayService.createDisplay(file.getName(), dataset);
 
             final ImgPlus ip = ImgOpener.open(((URLResponse) this.response).getURLString());
-            final Dataset dataset = new Dataset(context, ip);
+            final Dataset dataset = new DefaultDataset(context, ip);
             // display the dataset
             final DisplayService displayService = context.getService(DisplayService.class);
             displayService.createDisplay(((URLResponse) this.response).getURLString(), dataset);
