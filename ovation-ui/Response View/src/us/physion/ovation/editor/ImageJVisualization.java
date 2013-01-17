@@ -4,13 +4,17 @@
  */
 package us.physion.ovation.editor;
 
+import ij.ImagePlus;
+import ij.gui.ImageCanvas;
+import ij.io.Opener;
 import imagej.ImageJ;
 import imagej.display.DisplayService;
 import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.swing.JPanel;
 import net.imglib2.img.ImgPlus;
-import net.imglib2.io.ImgIOException;
 import net.imglib2.io.ImgOpener;
 import org.openide.util.lookup.ServiceProvider;
 import ovation.OvationException;
@@ -25,41 +29,33 @@ import imagej.data.Dataset;
  */
 public class ImageJVisualization implements Visualization{
 
-    private final ImageJ ijContext;
-    private final Response response;
-    ImageJVisualization(Response r)
+    JPanel panel;
+    ImageJVisualization(String url)
     {
-        this.ijContext = ImageJ.createContext();
-        this.response = r;
+        url = url.substring("file:".length());
+        // open a file with ImageJ
+        try {
+            final ImagePlus imp = new Opener().openImage(url);
+            panel = new BufferedImagePanel(imp.getBufferedImage());
+            /*ImageCanvas ic = new ImageCanvas(imp);
+            panel = new JPanel();
+            panel.add(ic);
+            */
+        } catch (Exception e) {
+            /*try {
+                ImgPlus ip = ImgOpener.open(url);
+                // display the dataset
+                DisplayService displayService = new ImageJ().getService(DisplayService.class);
+                displayService.getActiveDisplay().display(ip);
+            } catch (Exception ex){
+                System.out.println(ex);
+            }*/
+        }
     }
     
     @Override
     public Component generatePanel() {
-        assert (this.response instanceof URLResponse);
-
-        try {
-            final ImageJ context = ImageJ.createContext();
-
-//                // load the dataset
-//                final IOService ioService = context.getService(IOService.class);
-//                final Dataset dataset = ioService.loadDataset();
-
-//                // display the dataset
-//                final DisplayService displayService =
-//                        context.getService(DisplayService.class);
-//                displayService.createDisplay(file.getName(), dataset);
-
-            final ImgPlus ip = ImgOpener.open(((URLResponse) this.response).getURLString());
-            final Dataset dataset = new Dataset(context, ip);
-            // display the dataset
-            final DisplayService displayService = context.getService(DisplayService.class);
-            displayService.createDisplay(((URLResponse) this.response).getURLString(), dataset);
-            displayService.getActiveDisplay().display(ip);
-        } catch (ImgIOException ex) {
-            throw new OvationException("Unable to open image " + ex.getMessage());
-        }
-
-        return new JPanel();
+        return panel;
     }
 
     @Override
@@ -73,3 +69,4 @@ public class ImageJVisualization implements Visualization{
     }
     
 }
+
