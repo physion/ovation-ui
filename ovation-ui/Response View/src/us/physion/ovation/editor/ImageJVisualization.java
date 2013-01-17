@@ -18,6 +18,11 @@ import ovation.Response;
 import ovation.URLResponse;
 import imagej.data.Dataset;
 import imagej.data.DefaultDataset;
+import imagej.data.display.DefaultImageDisplay;
+import imagej.data.display.ImageDisplay;
+import imagej.ui.swing.sdi.viewer.SwingDisplayWindow;
+import imagej.ui.swing.sdi.viewer.SwingSdiImageDisplayViewer;
+import imagej.ui.swing.viewer.image.SwingImageDisplayViewer;
 
 
 /**
@@ -26,11 +31,9 @@ import imagej.data.DefaultDataset;
  */
 public class ImageJVisualization implements Visualization{
 
-    private final ImageJ ijContext;
     private final Response response;
     ImageJVisualization(Response r)
     {
-        this.ijContext = ImageJ.createContext();
         this.response = r;
     }
     
@@ -41,26 +44,25 @@ public class ImageJVisualization implements Visualization{
         try {
             final ImageJ context = new ImageJ();
 
-//                // load the dataset
-//                final IOService ioService = context.getService(IOService.class);
-//                final Dataset dataset = ioService.loadDataset();
-
-//                // display the dataset
-//                final DisplayService displayService =
-//                        context.getService(DisplayService.class);
-//                displayService.createDisplay(file.getName(), dataset);
-
+            // Open the Dataset
             final ImgPlus ip = ImgOpener.open(((URLResponse) this.response).getURLString());
             final Dataset dataset = new DefaultDataset(context, ip);
-            // display the dataset
-            final DisplayService displayService = context.getService(DisplayService.class);
-            displayService.createDisplay(((URLResponse) this.response).getURLString(), dataset);
-            displayService.getActiveDisplay().display(ip);
+            
+            // Display the dataset
+            final ImageDisplay display = new DefaultImageDisplay();
+            display.setContext(context);
+            display.display(dataset);
+            
+            final SwingImageDisplayViewer displayViewer = 
+                    new SwingSdiImageDisplayViewer();
+            final SwingDisplayWindow displayWindow = new SwingDisplayWindow();
+            displayViewer.view(displayWindow, display);
+            
+            return displayViewer.getPanel();
+            
         } catch (ImgIOException ex) {
-            throw new OvationException("Unable to open image " + ex.getMessage());
+            throw new OvationException("Unable to open image " + ((URLResponse) this.response).getURLString(), ex);
         }
-
-        return new JPanel();
     }
 
     @Override
