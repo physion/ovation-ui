@@ -42,7 +42,7 @@ public class ImageJVisualization implements Visualization{
         assert (this.response instanceof URLResponse);
 
         try {
-            final ImageJ context = new ImageJ();
+            final ImageJ context = new ImageJ(); //TODO can this be an instance variable?
 
             // Open the Dataset
             final ImgPlus ip = ImgOpener.open(((URLResponse) this.response).getURLString());
