@@ -8,14 +8,55 @@
             <module-dependencies/>
             <public-packages>
                 <package>imagej</package>
+                <package>imagej.build</package>
+                <package>imagej.build.minimaven</package>
                 <package>imagej.command</package>
                 <package>imagej.config</package>
+                <package>imagej.console</package>
+                <package>imagej.core.commands.app</package>
+                <package>imagej.core.commands.assign</package>
+                <package>imagej.core.commands.assign.noisereduce</package>
+                <package>imagej.core.commands.axispos</package>
+                <package>imagej.core.commands.convolve</package>
+                <package>imagej.core.commands.dataset</package>
+                <package>imagej.core.commands.debug</package>
+                <package>imagej.core.commands.display</package>
+                <package>imagej.core.commands.display.interactive</package>
+                <package>imagej.core.commands.imglib</package>
+                <package>imagej.core.commands.misc</package>
+                <package>imagej.core.commands.neigh</package>
+                <package>imagej.core.commands.overlay</package>
+                <package>imagej.core.commands.restructure</package>
+                <package>imagej.core.commands.rotate</package>
+                <package>imagej.core.commands.typechange</package>
+                <package>imagej.core.commands.upload</package>
+                <package>imagej.core.commands.zoom</package>
+                <package>imagej.core.options</package>
+                <package>imagej.core.platforms.macosx</package>
+                <package>imagej.core.platforms.windows</package>
+                <package>imagej.core.tools</package>
+                <package>imagej.data</package>
+                <package>imagej.data.display</package>
+                <package>imagej.data.display.event</package>
+                <package>imagej.data.event</package>
+                <package>imagej.data.measure</package>
+                <package>imagej.data.options</package>
+                <package>imagej.data.overlay</package>
+                <package>imagej.data.sampler</package>
+                <package>imagej.data.table</package>
                 <package>imagej.display</package>
                 <package>imagej.display.event</package>
                 <package>imagej.display.event.input</package>
                 <package>imagej.display.event.window</package>
                 <package>imagej.event</package>
                 <package>imagej.input</package>
+                <package>imagej.io</package>
+                <package>imagej.io.event</package>
+                <package>imagej.io.plugins</package>
+                <package>imagej.legacy</package>
+                <package>imagej.legacy.patches</package>
+                <package>imagej.legacy.plugin</package>
+                <package>imagej.legacy.translate</package>
                 <package>imagej.log</package>
                 <package>imagej.menu</package>
                 <package>imagej.menu.event</package>
@@ -31,14 +72,63 @@
                 <package>imagej.plugin.event</package>
                 <package>imagej.render</package>
                 <package>imagej.script</package>
+                <package>imagej.script.editor</package>
+                <package>imagej.script.editor.command</package>
+                <package>imagej.script.java</package>
                 <package>imagej.service</package>
                 <package>imagej.service.event</package>
                 <package>imagej.thread</package>
                 <package>imagej.tool</package>
                 <package>imagej.tool.event</package>
+                <package>imagej.ui</package>
+                <package>imagej.ui.common.awt</package>
+                <package>imagej.ui.swing</package>
+                <package>imagej.ui.swing.commands</package>
+                <package>imagej.ui.swing.commands.debug</package>
+                <package>imagej.ui.swing.mdi</package>
+                <package>imagej.ui.swing.mdi.viewer</package>
+                <package>imagej.ui.swing.menu</package>
+                <package>imagej.ui.swing.overlay</package>
+                <package>imagej.ui.swing.sdi</package>
+                <package>imagej.ui.swing.sdi.viewer</package>
+                <package>imagej.ui.swing.tools</package>
+                <package>imagej.ui.swing.tools.overlay</package>
+                <package>imagej.ui.swing.viewer.image</package>
+                <package>imagej.ui.swing.viewer.table</package>
+                <package>imagej.ui.swing.viewer.text</package>
+                <package>imagej.ui.swing.widget</package>
+                <package>imagej.ui.viewer</package>
+                <package>imagej.ui.viewer.image</package>
+                <package>imagej.ui.viewer.table</package>
+                <package>imagej.ui.viewer.text</package>
+                <package>imagej.updater.core</package>
+                <package>imagej.updater.gui</package>
+                <package>imagej.updater.ssh</package>
+                <package>imagej.updater.ui</package>
+                <package>imagej.updater.util</package>
                 <package>imagej.util</package>
+                <package>imagej.util.awt</package>
+                <package>imagej.util.swing</package>
+                <package>imagej.util.swing.tree</package>
                 <package>imagej.widget</package>
                 <package>net.imglib2</package>
+                <package>net.imglib2.algorithm</package>
+                <package>net.imglib2.algorithm.componenttree</package>
+                <package>net.imglib2.algorithm.componenttree.mser</package>
+                <package>net.imglib2.algorithm.componenttree.pixellist</package>
+                <package>net.imglib2.algorithm.edge</package>
+                <package>net.imglib2.algorithm.floydsteinberg</package>
+                <package>net.imglib2.algorithm.function</package>
+                <package>net.imglib2.algorithm.gauss</package>
+                <package>net.imglib2.algorithm.gauss3</package>
+                <package>net.imglib2.algorithm.gradient</package>
+                <package>net.imglib2.algorithm.integral</package>
+                <package>net.imglib2.algorithm.kdtree</package>
+                <package>net.imglib2.algorithm.labeling</package>
+                <package>net.imglib2.algorithm.region.hypersphere</package>
+                <package>net.imglib2.algorithm.region.localneighborhood</package>
+                <package>net.imglib2.algorithm.region.localneighborhood.old</package>
+                <package>net.imglib2.algorithm.stats</package>
                 <package>net.imglib2.collection</package>
                 <package>net.imglib2.concatenate</package>
                 <package>net.imglib2.converter</package>
@@ -66,6 +156,57 @@
                 <package>net.imglib2.meta</package>
                 <package>net.imglib2.multithreading</package>
                 <package>net.imglib2.neighborsearch</package>
+                <package>net.imglib2.ops.condition</package>
+                <package>net.imglib2.ops.data</package>
+                <package>net.imglib2.ops.function</package>
+                <package>net.imglib2.ops.function.bool</package>
+                <package>net.imglib2.ops.function.complex</package>
+                <package>net.imglib2.ops.function.general</package>
+                <package>net.imglib2.ops.function.real</package>
+                <package>net.imglib2.ops.img</package>
+                <package>net.imglib2.ops.input</package>
+                <package>net.imglib2.ops.operation</package>
+                <package>net.imglib2.ops.operation.bool.binary</package>
+                <package>net.imglib2.ops.operation.complex.binary</package>
+                <package>net.imglib2.ops.operation.complex.real.unary</package>
+                <package>net.imglib2.ops.operation.complex.unary</package>
+                <package>net.imglib2.ops.operation.img.binary</package>
+                <package>net.imglib2.ops.operation.img.unary</package>
+                <package>net.imglib2.ops.operation.imgplus.unary</package>
+                <package>net.imglib2.ops.operation.interval.binary</package>
+                <package>net.imglib2.ops.operation.interval.unary</package>
+                <package>net.imglib2.ops.operation.iterable.binary.localthresholder</package>
+                <package>net.imglib2.ops.operation.iterable.unary</package>
+                <package>net.imglib2.ops.operation.iterableinterval.binary</package>
+                <package>net.imglib2.ops.operation.iterableinterval.unary</package>
+                <package>net.imglib2.ops.operation.iterableinterval.unary.multilevelthresholder</package>
+                <package>net.imglib2.ops.operation.labeling.binary</package>
+                <package>net.imglib2.ops.operation.labeling.unary</package>
+                <package>net.imglib2.ops.operation.metadata.unary</package>
+                <package>net.imglib2.ops.operation.randomaccessible.binary</package>
+                <package>net.imglib2.ops.operation.randomaccessible.unary</package>
+                <package>net.imglib2.ops.operation.randomaccessibleinterval.binary</package>
+                <package>net.imglib2.ops.operation.randomaccessibleinterval.unary</package>
+                <package>net.imglib2.ops.operation.randomaccessibleinterval.unary.morph</package>
+                <package>net.imglib2.ops.operation.randomaccessibleinterval.unary.regiongrowing</package>
+                <package>net.imglib2.ops.operation.real.binary</package>
+                <package>net.imglib2.ops.operation.real.complex.unary</package>
+                <package>net.imglib2.ops.operation.real.unary</package>
+                <package>net.imglib2.ops.operation.subset.views</package>
+                <package>net.imglib2.ops.parse</package>
+                <package>net.imglib2.ops.parse.token</package>
+                <package>net.imglib2.ops.pointset</package>
+                <package>net.imglib2.ops.relation</package>
+                <package>net.imglib2.ops.relation.bool.binary</package>
+                <package>net.imglib2.ops.relation.complex.binary</package>
+                <package>net.imglib2.ops.relation.general.binary</package>
+                <package>net.imglib2.ops.relation.general.unary</package>
+                <package>net.imglib2.ops.relation.real.binary</package>
+                <package>net.imglib2.ops.relation.real.unary</package>
+                <package>net.imglib2.ops.sandbox</package>
+                <package>net.imglib2.ops.types</package>
+                <package>net.imglib2.ops.util</package>
+                <package>net.imglib2.ops.util.metadata</package>
                 <package>net.imglib2.outofbounds</package>
                 <package>net.imglib2.position.transform</package>
                 <package>net.imglib2.roi</package>
@@ -83,8 +224,256 @@
                 <package>net.imglib2.view</package>
             </public-packages>
             <class-path-extension>
-                <runtime-relative-path>ext/ij-bundle.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/ij-bundle.jar</binary-origin>
+                <runtime-relative-path>ext/lwf-stubs-4.5-imagej-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/lwf-stubs-4.5-imagej-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-util-awt-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-util-awt-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/object-inspector-0.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/object-inspector-0.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-ui-swing-tools-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-ui-swing-tools-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jai_imageio-4.5-imagej-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jai_imageio-4.5-imagej-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/slf4j-log4j12-1.5.10.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/slf4j-log4j12-1.5.10.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-io-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-io-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-updater-core-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-updater-core-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-util-swing-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-util-swing-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jcommon-1.0.17.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jcommon-1.0.17.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jsch-0.1.42.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jsch-0.1.42.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/xml-apis-1.3.04.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/xml-apis-1.3.04.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/imglib2-2.0.0-SNAPSHOT.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/imglib2-2.0.0-SNAPSHOT.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/xalan-2.7.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/xalan-2.7.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jfreechart-1.0.14.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jfreechart-1.0.14.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/serializer-2.7.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/serializer-2.7.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-1.47h.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-1.47h.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-script-java-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-script-java-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-legacy-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-legacy-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-ui-swing-commands-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-ui-swing-commands-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/rsyntaxtextarea-2.0.4.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/rsyntaxtextarea-2.0.4.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-ui-swing-updater-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-ui-swing-updater-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/itext-2.1.5.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/itext-2.1.5.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-launcher-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-launcher-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/scifio-devel-4.5-imagej-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/scifio-devel-4.5-imagej-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/imglib2-ops-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/imglib2-ops-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/miglayout-3.7.3.1-swing.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/miglayout-3.7.3.1-swing.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ome-xml-4.5-imagej-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ome-xml-4.5-imagej-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/bcmail-jdk14-138.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/bcmail-jdk14-138.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-ui-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-ui-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-commands-app-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-commands-app-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-commands-display-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-commands-display-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-minimaven-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-minimaven-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/bsh-2.0b4.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/bsh-2.0b4.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-ui-swing-script-editor-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-ui-swing-script-editor-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-ui-swing-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-ui-swing-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-options-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-options-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/forms-1.2.1.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/forms-1.2.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-platforms-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-platforms-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-commands-debug-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-commands-debug-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/scifio-4.5-imagej-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/scifio-4.5-imagej-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/javassist-3.16.1-GA.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/javassist-3.16.1-GA.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-updater-ssh-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-updater-ssh-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/base64-2.3.8.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/base64-2.3.8.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/jhotdraw-7.6.0.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jhotdraw-7.6.0.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-data-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-data-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/bcprov-jdk14-138.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/bcprov-jdk14-138.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-ui-common-awt-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-ui-common-awt-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/tools-1.4.2.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/tools-1.4.2.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-commands-data-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-commands-data-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/slf4j-api-1.5.10.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/slf4j-api-1.5.10.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-script-beanshell-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-script-beanshell-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-core-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-core-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-tools-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-tools-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/imglib2-io-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/imglib2-io-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/loci-legacy-4.5-imagej-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/loci-legacy-4.5-imagej-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-commands-upload-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-commands-upload-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/imglib2-algorithms-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/imglib2-algorithms-2.0.0-beta6.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/log4j-1.2.14.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/log4j-1.2.14.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/eventbus-1.4.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/eventbus-1.4.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-commands-misc-2.0.0-SNAPSHOT.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-commands-misc-2.0.0-SNAPSHOT.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/sezpoz-1.9.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/sezpoz-1.9.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ij-app-2.0.0-beta6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/ij-app-2.0.0-beta6.jar</binary-origin>
             </class-path-extension>
         </data>
     </configuration>
